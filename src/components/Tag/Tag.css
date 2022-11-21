@@ -1,0 +1,12 @@
+#tag {
+    background-color: var(--primary-color);
+    height: 25px;
+    min-width: 35px;
+    padding: 0 40px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

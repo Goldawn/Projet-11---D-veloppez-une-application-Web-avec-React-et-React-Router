@@ -1,0 +1,40 @@
+#carousel {
+    width: 100%;
+    height: 415px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#gallery-control {
+    --padding-space: 20px; 
+    position: absolute;
+    width: calc(100% - (2*var(--padding-space)));
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--padding-space);
+}
+
+#gallery-control img {
+    width: 45px;
+    height: 80px;
+}
+
+#gallery-control:hover {
+    background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 15%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.15) 85%, rgba(0,0,0,0.3) 100%);
+}
+
+#gallery-control img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
