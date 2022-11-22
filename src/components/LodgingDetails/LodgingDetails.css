@@ -2,38 +2,77 @@
     color: var(--primary-color);
 }
 
-#lodging-details #heading-and-profile, #tags-and-rating {
+#heading-and-tags {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #lodging-details h1 {
-    font-size: 36px;
+    font-size: 18px;
+    font-weight: 500;
     margin: 0;
 }
 
 #lodging-details h2 {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 500;
     margin: 0;
 }
 
+#tag-container {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#rating-and-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#rating{
+    display: flex;
+    gap: 5px;
+}
+
+#rating img.star {
+    width: 15px;
+    aspect-ratio: 1;
+}
+
+#rating img.star.empty {
+    filter: saturate(0%) brightness(169%);
+}
+
+
 #lodging-details #profile {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 10px;
 }
 
 #lodging-details #profile p {
     margin: 0;
-    font-size: 18px;
+    font-size: 12px;
     text-align: right;
+    width: 50%;
 }
 
 #lodging-details #profile-picture {
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: turquoise;
     overflow: hidden;
 }
 
@@ -43,30 +82,69 @@
     object-fit: cover;
 }
 
-#tags-and-rating {
-    margin-top: 20px;
-}
-
-#tag-container {
-    margin-bottom: 25px;
-    display: flex;
-    gap: 10px;
-}
-
-#rating img.star {
-    width: 30px;
-    aspect-ratio: 1;
-}
-
-#rating img.star.empty {
-    filter: saturate(0%) brightness(169%);
-}
-
 #lodging-details-dropdown {
     display: flex;
-    gap: 75px;
+    flex-direction: column;
+    gap: 25px;
 }
 
 #lodging-details-dropdown p {
-    font-size: 18px;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+
+    section#lodging-infos {
+        display: flex;
+    }
+
+    #heading-and-tags {
+        width: 70%;
+        gap: 20px;
+    }
+
+    #tag-container {
+        margin-bottom: 25px;
+    }
+
+    #rating-and-profile {
+        width: 30%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+        margin-bottom: 15px;
+    }
+
+    #lodging-details h1 {
+        font-size: 36px;
+    }
+    
+    #lodging-details h2 {
+        font-size: 18px;
+    }
+
+    #lodging-details #profile p {
+        font-size: 18px;
+    }
+
+    #lodging-details #profile-picture {
+        width: 64px;
+        height: 64px;
+    }
+
+    #rating img.star {
+        width: 30px;
+        aspect-ratio: 1;
+    }
+
+    #lodging-details-dropdown {
+        flex-direction: row;
+        gap: 75px;
+    }
+    
+    #lodging-details-dropdown p {
+        font-size: 18px;
+    }
+    
 }

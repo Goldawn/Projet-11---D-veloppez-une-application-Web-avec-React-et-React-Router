@@ -14,12 +14,21 @@
 }
 
 main {
-  padding: 0 100px;
-  max-width: 1240px;
+  --main-content-padding: 20px;
+  --site-width: 1400px;
+  width: calc(100% - (2*var(--main-content-padding)));
+  max-width: var(--site-width);
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    --main-content-padding: 100px;
+  }
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {

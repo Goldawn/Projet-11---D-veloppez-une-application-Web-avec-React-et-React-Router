@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from "react-router-dom"
 import star from "../../assets/icons/star.svg"
 import Carousel from "../Carousel/Carousel"
@@ -6,56 +6,68 @@ import Dropdown from '../Dropdown/Dropdown'
 import Tag from '../Tag/Tag'
 import './LodgingDetails.css'
 
-export default function LodgingDetails(props) {
-    
+export default function LodgingDetails() {
+
+    const navigate = useNavigate();
     const location = useLocation();
+    console.log(location)
     const lodgingData = location.state.data
     const ratingValue = Number(lodgingData.rating)
     const restValue = 5 - ratingValue;
     console.log(lodgingData)
 
+    useEffect(()=> {
+        if(lodgingData === undefined) {
+            navigate('*')
+        }
+    })
+
     return (
         <main id="lodging-details">
             <Carousel data={lodgingData.pictures}/>
-            <div id="heading-and-profile">
-                <div id="heading">
-                    <h1>{lodgingData.title}</h1>
-                    <h2>{lodgingData.location}</h2>
-                </div>
-                <div id="profile">
-                    <p>Alexandre <br />Dumas</p>
-                    <div id="profile-picture">
-                        <img src={lodgingData.host.picture} alt="profile picture"></img>
+            <section id="lodging-infos">
+                <div id="heading-and-tags">
+                    <div id="heading">
+                        <h1>{lodgingData.title}</h1>
+                        <h2>{lodgingData.location}</h2>
+                    </div>
+                    <div id="tag-container">
+                        {
+                            lodgingData.tags.map((tag ,id) => {
+                                return (
+                                    <Tag key={id} data={tag} />
+                                )
+                            })
+                        }
                     </div>
                 </div>
-            </div>
-            <div id="tags-and-rating">
-                <div id="tag-container">
-                    {
-                        lodgingData.tags.map((tag ,id) => {
-                            return (
-                                <Tag key={id} data={tag} />
+                <div id="rating-and-profile">
+                    
+                    <div id="rating">
+                        {
+                            [...Array(ratingValue)].map((e, i) => 
+                                <img src={star} className="star" key={i} alt="logo" />
+                            )    
+                        }
+                        {
+                            [...Array(restValue)].map((e, i) => 
+                                <img src={star} className="star empty" key={i} alt="logo" />
                             )
-                        })
-                    }
+                        }
+                    </div>
+                    <div id="profile">
+                        <p>{lodgingData.host.name}</p>
+                        <div id="profile-picture">
+                            <img src={lodgingData.host.picture} alt="profile picture"></img>
+                        </div>
+                    </div>
                 </div>
-                <div id="rating">
-                    {
-                        [...Array(ratingValue)].map((e, i) => 
-                            <img src={star} className="star" key={i} alt="logo" />
-                        )    
-                    }
-                    {
-                        [...Array(restValue)].map((e, i) => 
-                            <img src={star} className="star empty" key={i} alt="logo" />
-                        )
-                    }
-                </div>
-            </div>
+            </section>
             <div id="lodging-details-dropdown">
-                <Dropdown name="Description" content={lodgingData.description}/>
-                <Dropdown name="Equipements" content={lodgingData.equipments}/>
+                <Dropdown name="Description" isOpen content={lodgingData.description}/>
+                <Dropdown name="Equipements" isOpen content={lodgingData.equipments}/>
             </div>
         </main>
     )
+    
 }

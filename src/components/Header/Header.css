@@ -1,14 +1,30 @@
 header {
-    margin-top: 40px;
-    margin-bottom: 65px;
+    --header-hor-padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: calc(100% - 200px);
-    max-width: 1240px;
-    padding: 0 100px;
+    width: calc(100% - (2*var(--header-hor-padding)));
+    padding: 0 var(--header-hor-padding);
+    max-width: 1400px;
 }
 
 img.logo {
-    width: 210px;
+    width: 145px;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        --header-hor-padding: 100px;
+        margin-top: 40px;
+        margin-bottom: 65px;
+        width: calc(100% - (2*var(--header-hor-padding)));
+        padding: 0 var(--header-hor-padding);
+    }
+    
+    img.logo {
+        width: 210px;
+    }
+    
 }

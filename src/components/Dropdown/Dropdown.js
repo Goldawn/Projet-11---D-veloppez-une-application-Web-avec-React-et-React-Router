@@ -4,7 +4,7 @@ import './Dropdown.css'
 
 export default function Dropdown(params) {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(params.isOpen ? params.isOpen : false);
 
     const toggleDropdown = () => {
         isOpen === true ? setIsOpen(false) : setIsOpen(true);

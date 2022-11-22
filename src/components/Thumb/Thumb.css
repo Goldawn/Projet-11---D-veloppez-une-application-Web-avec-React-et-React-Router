@@ -1,18 +1,14 @@
 #thumb {
-    --vertical-gap-value: 50px;
+    --aspect-ratio : 67/51;
+    --vertical-gap-value: 20px;
     position: relative;
     overflow: hidden;
     /* max-width: 340px; */
     border-radius: 10px;
-    /* background: var(--primary-color); */
-    width: 30%;
-    aspect-ratio: 1;
+    width: 100%;
+    aspect-ratio: var(--aspect-ratio);
     margin-bottom: var(--vertical-gap-value);
     transition: all .4s ;
-}
-
-#thumb:nth-child(3n + 2) {
-    margin: 0 5% var(--vertical-gap-value) 5%;
 }
 
 #thumb img {
@@ -24,7 +20,7 @@
 #gradient-veil {
     background :linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: var(--aspect-ratio);
     position: absolute;
     top: 0;
     z-index: 0;
@@ -44,6 +40,25 @@
 
 h3 {
     color: white;
-    padding: 0 20px 20px  20px;
+    padding: 0 50% 20px  20px;
     margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #thumb {
+        --aspect-ratio :1;
+        --vertical-gap-value: 50px;
+        /* max-width: 340px; */  
+        width: 30%;
+    } 
+
+    #thumb:nth-child(3n + 2) {
+        margin: 0 5% var(--vertical-gap-value) 5%;
+    }
+
+    h3 {
+        color: white;
+        padding: 0 20px 20px  20px;
+        margin: 0;
+    }
 }

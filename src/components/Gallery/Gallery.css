@@ -1,7 +1,14 @@
 #gallery {
     display: flex;
     flex-flow: row wrap;
-    background: #F7F7F7;
-    border-radius: 25px;
-    padding: 55px 50px;
+}
+
+@media screen and (min-width: 768px) {
+    #gallery {
+        display: flex;
+        flex-flow: row wrap;
+        background: #F7F7F7;
+        border-radius: 25px;
+        padding: 55px 50px;
+    }    
 }

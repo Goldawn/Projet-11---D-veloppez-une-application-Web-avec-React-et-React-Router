@@ -1,18 +1,40 @@
 #page-not-found {
+    margin: 180px;
+    width: calc( 100% - 80px);
     color: var(--primary-color);
     text-align: center;
 }
 
 #page-not-found h1 {
-    font-size: 288px;
+    font-size: 96px;
     margin: 0;
 }
 
 #page-not-found p {
-    font-size: 36px;
+    font-size: 18px;
+    margin-bottom: 120px;
 }
 
 #page-not-found a {
-    font-size: 18px;
+    font-size: 14px;
     color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+
+    #page-not-found {
+        margin: 80px;
+    }
+    
+    #page-not-found h1 {
+        font-size: 288px;
+    }
+    
+    #page-not-found p {
+        font-size: 36px;
+    }
+    
+    #page-not-found a {
+        font-size: 18px;
+    }
 }

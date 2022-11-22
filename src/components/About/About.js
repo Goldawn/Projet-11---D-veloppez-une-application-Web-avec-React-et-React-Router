@@ -13,7 +13,7 @@ export default function About() {
     }
 
     return (
-        <main>
+        <main id="about-us">
             <Banner />
             <div id="dropdown-container">
                 <Dropdown name="Fiabilité" content={AboutContent.fiabilite}/>

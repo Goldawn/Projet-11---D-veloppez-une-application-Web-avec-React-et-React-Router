@@ -1,12 +1,23 @@
 #tag {
     background-color: var(--primary-color);
-    height: 25px;
-    min-width: 35px;
-    padding: 0 40px;
-    border-radius: 10px;
-    font-size: 14px;
+    height: 18px;
+    min-width: 25px;
+    padding: 0 30px;
+    border-radius: 5px;
+    font-size: 10px;
     color: white;
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+
+    #tag {
+        height: 25px;
+        min-width: 35px;
+        padding: 0 40px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
 }

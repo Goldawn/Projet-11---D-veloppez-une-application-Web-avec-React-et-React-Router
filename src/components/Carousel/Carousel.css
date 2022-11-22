@@ -1,20 +1,21 @@
 #carousel {
+    --aspect-ratio-carousel: 67/51;
     width: 100%;
-    height: 415px;
-    margin-bottom: 30px;
-    border-radius: 25px;
+    aspect-ratio: var(--aspect-ratio-carousel);
+    margin-bottom: 15px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
 
 #carousel img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: var(--aspect-ratio-carousel);
     object-fit: cover;
 }
 
 #gallery-control {
-    --padding-space: 20px; 
+    --padding-space: 6px; 
     position: absolute;
     width: calc(100% - (2*var(--padding-space)));
     height: 100%;
@@ -26,8 +27,8 @@
 }
 
 #gallery-control img {
-    width: 45px;
-    height: 80px;
+    width: 12px;
+    height: 20px;
 }
 
 #gallery-control:hover {
@@ -37,4 +38,22 @@
 #gallery-control img:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+
+    #carousel {
+        height: 415px;
+        margin-bottom: 30px;
+        border-radius: 25px;
+    }
+
+    #gallery-control {
+        --padding-space: 20px; 
+    }
+
+    #gallery-control img {
+        width: 45px;
+        height: 80px;
+    }
 }
