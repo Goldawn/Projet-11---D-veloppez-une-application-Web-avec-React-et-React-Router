@@ -28,10 +28,13 @@ export default function Carousel(props) {
                     )
                 })
             }
-            <div id="gallery-control">
+            { imageList.length > 1 &&(
+                <div id="gallery-control">
                 <img src={arrowLeft} className="arrow" alt="arrow-left" onClick={prevSlide}/>
                 <img src={arrowRight} className="arrow" alt="arrow-right" onClick={nextSlide}/>
             </div>
+            )}
+            
         </section>
     )
 }

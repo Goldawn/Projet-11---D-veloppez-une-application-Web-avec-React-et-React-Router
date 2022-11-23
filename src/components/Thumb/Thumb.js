@@ -3,9 +3,8 @@ import {Link} from 'react-router-dom'
 import './Thumb.css'
 
 export default function Thumb(props) {
-
-    console.log(props.data.pictures[0])
-    const thumbnail = props.data.pictures[0]
+    
+    const thumbnail = props.data.pictures[Math.floor(Math.random()*props.data.pictures.length)]
 
     return (
         <Link id="thumb" to={props.data.id} state={props}>

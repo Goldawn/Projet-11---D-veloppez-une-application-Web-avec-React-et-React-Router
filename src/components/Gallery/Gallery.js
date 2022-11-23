@@ -5,8 +5,6 @@ import logements from '../../data/logements.json'
 
 export default function Gallery() {
 
-    console.log(logements.length)
-
     return (
         <div id="gallery">
         
