@@ -10,12 +10,30 @@
     width: 1000px;
     max-width: 100%;
     background-color: #F6F6F6;
-    border-radius: 5px;    
+    border-radius: 5px;
+}
+
+#dropdown img {
+    transition: all .3s;
+}
+
+#dropdown img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#dropdown.closed img:hover {
+    transform: scale(1.2) rotateX(180deg);
+    cursor: pointer;
 }
 
 #dropdown.closed {
     height: var(--dropdown-heading-height);
     overflow: hidden;
+}
+
+#dropdown.closed img {
+    transform: rotateX(180deg);
 }
 
 #dropdown-heading {

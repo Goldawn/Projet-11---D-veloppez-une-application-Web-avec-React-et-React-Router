@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import arrowDown from "../../assets/icons/arrow-down.svg"
+import arrowUp from "../../assets/icons/arrow-up.svg"
 import './Dropdown.css'
 
 export default function Dropdown(params) {
@@ -14,7 +14,7 @@ export default function Dropdown(params) {
         <div id="dropdown" className={isOpen ? 'opened' : 'closed'}>
             <div id="dropdown-heading">
                 <p>{params.name}</p>
-                <img src={arrowDown} className="arrow" alt="arrow-down" onClick={toggleDropdown}/>
+                <img src={arrowUp} className="arrow" alt="arrow-down" onClick={toggleDropdown}/>
             </div>
             <div id="dropdown-content">
                 {!Array.isArray(params.content) && <p>{params.content}</p>}

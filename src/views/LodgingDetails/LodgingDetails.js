@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from "react-router-dom"
 import star from "../../assets/icons/star.svg"
-import Carousel from "../Carousel/Carousel"
-import Dropdown from '../Dropdown/Dropdown'
-import Tag from '../Tag/Tag'
+import Carousel from "../../components/Carousel/Carousel"
+import Dropdown from '../../components/Dropdown/Dropdown'
+import Tag from '../../components/Tag/Tag'
 import './LodgingDetails.css'
 
 export default function LodgingDetails() {

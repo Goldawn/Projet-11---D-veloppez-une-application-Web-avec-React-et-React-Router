@@ -1,7 +1,5 @@
 #carousel {
-    --aspect-ratio-carousel: 67/51;
     width: 100%;
-    aspect-ratio: var(--aspect-ratio-carousel);
     margin-bottom: 15px;
     border-radius: 10px;
     overflow: hidden;
@@ -10,7 +8,7 @@
 
 #carousel img {
     width: 100%;
-    aspect-ratio: var(--aspect-ratio-carousel);
+    height: 100%;
     object-fit: cover;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from '../Banner/Banner'
-import Dropdown from '../Dropdown/Dropdown'
+import Banner from '../../components/Banner/Banner'
+import Dropdown from '../../components/Dropdown/Dropdown'
 import './About.css'
 
 export default function About() {
