@@ -43,13 +43,25 @@
 @media screen and (min-width: 768px) {
 
     #carousel {
-        height: 415px;
+        height: 350px;
         margin-bottom: 30px;
         border-radius: 25px;
     }
 
     #gallery-control {
         --padding-space: 20px; 
+    }
+
+    #gallery-control img {
+        width: 30px;
+        height: 55px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #carousel {
+        height: 415px;
     }
 
     #gallery-control img {

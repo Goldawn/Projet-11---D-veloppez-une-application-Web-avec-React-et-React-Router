@@ -21,3 +21,14 @@
         font-size: 14px;
     }
 }
+
+@media screen and (min-width: 1024px) {
+
+    #tag {
+        height: 25px;
+        min-width: 35px;
+        padding: 0 40px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+}

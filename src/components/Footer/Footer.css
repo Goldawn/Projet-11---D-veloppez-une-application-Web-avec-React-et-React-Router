@@ -19,6 +19,13 @@ footer img {
 
 @media screen and (min-width: 768px) {
     footer {
+        gap: 20px; 
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
         gap: 30px; 
         font-size: 24px;
     }

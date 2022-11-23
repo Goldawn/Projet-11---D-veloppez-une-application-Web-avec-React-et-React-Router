@@ -23,6 +23,25 @@
 @media screen and (min-width: 768px) {
 
     #page-not-found {
+        margin: 10px;
+    }
+    
+    #page-not-found h1 {
+        font-size: 200px;
+    }
+    
+    #page-not-found p {
+        font-size: 26px;
+    }
+    
+    #page-not-found a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #page-not-found {
         margin: 80px;
     }
     

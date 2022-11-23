@@ -47,8 +47,7 @@ h3 {
 @media screen and (min-width: 768px) {
     #thumb {
         --aspect-ratio :1;
-        --vertical-gap-value: 50px;
-        /* max-width: 340px; */  
+        --vertical-gap-value: 25px;
         width: 30%;
     } 
 
@@ -59,6 +58,17 @@ h3 {
     h3 {
         color: white;
         padding: 0 20px 20px  20px;
+        font-size: 14px;
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #thumb {
+        --vertical-gap-value: 50px;
+    } 
+
+    h3 {
+        font-size: 18px;
     }
 }

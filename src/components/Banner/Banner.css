@@ -42,8 +42,14 @@
     }
            
     #banner-veil h1 {
-        font-size: 48px;
+        font-size: 36px;
         font-weight: 500;
-    }
-    
+    }  
+}
+
+@media screen and (min-width: 1024px) {
+  
+    #banner-veil h1 {
+        font-size: 48px;
+    }  
 }
