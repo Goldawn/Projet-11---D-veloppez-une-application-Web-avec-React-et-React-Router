@@ -58,7 +58,7 @@ export default function LodgingDetails() {
                         <div id="profile">
                             <p>{lodgingData.host.name}</p>
                             <div id="profile-picture">
-                                <img src={lodgingData.host.picture} alt="profile picture"></img>
+                                <img src={lodgingData.host.picture} alt="user profile"></img>
                             </div>
                         </div>
                     </div>
