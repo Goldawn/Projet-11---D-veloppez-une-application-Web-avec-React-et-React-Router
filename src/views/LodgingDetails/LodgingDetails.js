@@ -4,24 +4,31 @@ import star from "../../assets/icons/star.svg"
 import Carousel from "../../components/Carousel/Carousel"
 import Dropdown from '../../components/Dropdown/Dropdown'
 import Tag from '../../components/Tag/Tag'
+import logements from '../../data/logements.json'
 import './LodgingDetails.css'
 
 export default function LodgingDetails() {
 
     const navigate = useNavigate();
     const location = useLocation();    
+    const singleLogement = logements.find(logement => logement.id === location.pathname.slice(1))
+    console.log(singleLogement)
+
+    
+  
 
     useEffect(()=> {
-        if(location.state === null) {
+      
+        if(!singleLogement) {
             navigate("*")
         }
     })
 
-    if(location.state !== null) {
-        const lodgingData = location.state.data
+    if(singleLogement) {
+        const lodgingData = singleLogement
         const ratingValue = Number(lodgingData.rating)
         const restValue = 5 - ratingValue;
-
+    
         return (
             <main id="lodging-details">
                 <Carousel data={lodgingData.pictures}/>
@@ -70,7 +77,4 @@ export default function LodgingDetails() {
             </main>
         )
     }
-
-    
-    
 }
