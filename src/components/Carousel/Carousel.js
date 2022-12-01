@@ -22,9 +22,14 @@ export default function Carousel(props) {
             {
                 imageList.map((image, index) => {
                     return (
+                        <>
                         <picture key={index} className={index === current ? 'active' : ""}>
                             {index === current && (<img src={image} key={index} alt=""></img>)}
                         </picture>
+                        <div id="slide-counter" key={index} className={index === current ? 'active' : ""}>
+                            {index === current && (<>{index+1}/{imageList.length}</>)}
+                            </div>
+                        </>
                     )
                 })
             }

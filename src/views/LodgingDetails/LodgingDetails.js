@@ -12,13 +12,8 @@ export default function LodgingDetails() {
     const navigate = useNavigate();
     const location = useLocation();    
     const singleLogement = logements.find(logement => logement.id === location.pathname.slice(1))
-    console.log(singleLogement)
-
-    
   
-
-    useEffect(()=> {
-      
+    useEffect(()=> {    
         if(!singleLogement) {
             navigate("*")
         }
@@ -32,6 +27,7 @@ export default function LodgingDetails() {
         return (
             <main id="lodging-details">
                 <Carousel data={lodgingData.pictures}/>
+
                 <section id="lodging-infos">
                     <div id="heading-and-tags">
                         <div id="heading">
@@ -70,6 +66,7 @@ export default function LodgingDetails() {
                         </div>
                     </div>
                 </section>
+                
                 <div id="lodging-details-dropdown">
                     <Dropdown name="Description" isOpen content={lodgingData.description}/>
                     <Dropdown name="Equipements" isOpen content={lodgingData.equipments}/>
